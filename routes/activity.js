@@ -54,7 +54,7 @@ function logData(req) {
 exports.edit = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
     //console.log( req.body );
-    logData(req);
+    // logData(req);
     res.send(200, 'Edit');
 };
 
@@ -64,7 +64,7 @@ exports.edit = function (req, res) {
 exports.save = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
     //console.log( req.body );
-    logData(req);
+    // logData(req);
     res.send(200, 'Save');
 };
 
@@ -109,7 +109,7 @@ exports.execute = function (req, res) {
 exports.publish = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
     //console.log( req.body );
-    logData(req);
+    // logData(req);
     res.send(200, 'Publish');
 };
 
@@ -119,6 +119,6 @@ exports.publish = function (req, res) {
 exports.validate = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
     //console.log( req.body );
-    logData(req);
+    // logData(req);
     res.send(200, 'Validate');
 };
