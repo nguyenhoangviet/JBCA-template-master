@@ -90,7 +90,7 @@ exports.execute = function (req, res) {
             var message = decoded.inArguments[0].message;
             var ContactID = decoded.inArguments[0].ContactID;
             
-            console.log('decodedArgs',decodedArgs);
+            console.log('ContactID',ContactID);
             // console.log('ContactID',ContactID);
             // console.log('----message',message);
             // logData(req);
