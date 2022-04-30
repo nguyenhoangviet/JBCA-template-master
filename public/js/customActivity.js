@@ -105,10 +105,12 @@ define([
             "tokens": authTokens,
             "ContactKey": "aaaaaaa",
             "message": message ,
-            "ContactID": "{{Contact.Attribute.jbca_2.ContactID}}" 
+            "ContactID": "{{Contact.Key}}" 
         }];
         
         payload['metaData'].isConfigured = true;
+
+        payload['arguments'].contactKey = true;
 
         console.log(payload);
         connection.trigger('updateActivity', payload);
