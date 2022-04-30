@@ -9,13 +9,17 @@
     "lang": {
         "en-US": {
             "name": "YYY",
-          "description": "A Template for a custom Journey Builder activity",
+          "description": "Custom Journey Builder activity",
           "step1Label": "Configure Activity"
         }
     },
     "arguments": {
         "execute": {
-           "inArguments":[],
+           "inArguments":[ {
+            "ContactID": "{{Contact.Attribute.jbca_2.ContactID}}" ,
+            "FirstName": "{{Contact.Attribute.jbca_2.FirstName}}" ,
+            "LastName": "{{Contact.Attribute.jbca_2.LastName}}" 
+         }],
           "outArguments": [],
           "url": "https://vietnguyen-jbca-1.herokuapp.com/journeybuilder/execute",
            "verb": "POST",
