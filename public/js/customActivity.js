@@ -96,11 +96,16 @@ define([
     }
 
     function save() {
-        var postcardURLValue = $('#postcard-url').val();
-        var postcardTextValue = $('#postcard-text').val();
+        // var postcardURLValue = $('#postcard-url').val();
+        // var postcardTextValue = $('#postcard-text').val();
+
+        var message = $("#message").val();
 
         payload['arguments'].execute.inArguments = [{
-            "tokens": authTokens
+            "tokens": authTokens,
+            "ContactKey": "aaaaaaa",
+            "message": message ,
+            "ContactID": "{{Contact.Attribute.jbca_2.ContactID}}" 
         }];
         
         payload['metaData'].isConfigured = true;
