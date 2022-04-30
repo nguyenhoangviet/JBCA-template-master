@@ -85,13 +85,14 @@ exports.execute = function (req, res) {
         if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
             
             // decoded in arguments
-            // var decodedArgs = decoded.inArguments[0];
+            var decodedArgs = decoded.inArguments[0];
 
             var message = decoded.inArguments[0].message;
             var ContactID = decoded.inArguments[0].ContactID;
             
-            console.log('ContactID',ContactID);
-            console.log('----message',message);
+            console.log('decodedArgs',decodedArgs);
+            // console.log('ContactID',ContactID);
+            // console.log('----message',message);
             // logData(req);
             res.send(200, 'Execute');
         } else {
