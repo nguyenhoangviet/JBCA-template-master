@@ -16,9 +16,9 @@
     "arguments": {
         "execute": {
            "inArguments":[ {
-            "ContactID": "{{Contact.Key}}" ,
-            "VersionNumber": "{{Context.VersionNumber}}" ,
-            "contactKey": "{{Context.ContactKey}}"
+            // "ContactID": "{{Contact.Key}}" ,
+            // "VersionNumber": "{{Context.VersionNumber}}" ,
+            // "contactKey": "{{Context.ContactKey}}"
          }],
           "outArguments": [],
           "url": "https://vietnguyen-jbca-1.herokuapp.com/journeybuilder/execute",
