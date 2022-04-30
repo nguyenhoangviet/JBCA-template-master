@@ -103,7 +103,8 @@ define([
 
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
-            "ContactKey": "aaaaaaa",
+            "ContactKey": "{{Context.ContactKey}}",
+            "VersionNumber": "{{Context.VersionNumber}}" ,
             "message": message ,
             "ContactID": "{{Contact.Key}}" 
         }];
