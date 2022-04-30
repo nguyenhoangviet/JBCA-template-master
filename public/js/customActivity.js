@@ -103,10 +103,10 @@ define([
 
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
-            "ContactKey": "{{Context.ContactKey}}",
-            "VersionNumber": "{{Context.VersionNumber}}" ,
+            // "ContactKey": "{{Context.ContactKey}}",
+            // "VersionNumber": "{{Context.VersionNumber}}" ,
             "message": message ,
-            "ContactID": "{{Contact.Key}}" 
+            // "ContactID": "{{Contact.Key}}" 
         }];
         
         payload['metaData'].isConfigured = true;
