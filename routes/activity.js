@@ -95,10 +95,10 @@ exports.execute = function (req, res) {
             var ContactID = decoded.inArguments[0].ContactID;
             var contactkey = decoded.inArguments[0].contactkey;
             
-            console.log('contactkey',contactkey);
             
-            // console.log('ContactID',ContactID);
-            // console.log('----message',message);
+            
+            console.log('ContactID',ContactID);
+            console.log('----message',message);
             logData(req);
             // res.send(200, 'Execute');
             res.status(200).send('Execute');
