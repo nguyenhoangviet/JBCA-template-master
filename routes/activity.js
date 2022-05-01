@@ -29,23 +29,23 @@ function logData(req) {
         secure: req.secure,
         originalUrl: req.originalUrl
     });
-    // console.log("body: " + util.inspect(req.body));
-    // console.log("headers: " + req.headers);
-    // console.log("trailers: " + req.trailers);
-    // console.log("method: " + req.method);
-    // console.log("url: " + req.url);
-    // console.log("params: " + util.inspect(req.params));
-    // console.log("query: " + util.inspect(req.query));
-    // console.log("route: " + req.route);
-    // console.log("cookies: " + req.cookies);
-    // console.log("ip: " + req.ip);
-    // console.log("path: " + req.path);
-    // console.log("host: " + req.host);
-    // console.log("fresh: " + req.fresh);
-    // console.log("stale: " + req.stale);
-    // console.log("protocol: " + req.protocol);
-    // console.log("secure: " + req.secure);
-    // console.log("originalUrl: " + req.originalUrl);
+    console.log("body: " + util.inspect(req.body));
+    console.log("headers: " + req.headers);
+    console.log("trailers: " + req.trailers);
+    console.log("method: " + req.method);
+    console.log("url: " + req.url);
+    console.log("params: " + util.inspect(req.params));
+    console.log("query: " + util.inspect(req.query));
+    console.log("route: " + req.route);
+    console.log("cookies: " + req.cookies);
+    console.log("ip: " + req.ip);
+    console.log("path: " + req.path);
+    console.log("host: " + req.host);
+    console.log("fresh: " + req.fresh);
+    console.log("stale: " + req.stale);
+    console.log("protocol: " + req.protocol);
+    console.log("secure: " + req.secure);
+    console.log("originalUrl: " + req.originalUrl);
 }
 
 /*
@@ -94,7 +94,7 @@ exports.execute = function (req, res) {
             var message = decoded.inArguments[0].message;
             var ContactID = decoded.inArguments[0].ContactID;
             
-            console.log('ContactID',ContactID);
+            // console.log('ContactID',ContactID);
             
             // console.log('ContactID',ContactID);
             // console.log('----message',message);
