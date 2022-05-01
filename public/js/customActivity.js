@@ -61,7 +61,7 @@ define([
 
         var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
 
-        console.log(inArguments);
+        console.log("inArgumentssaa");
 
         // $.each(inArguments, function (index, inArgument) {
         //     $.each(inArgument, function (key, val) {
@@ -110,8 +110,6 @@ define([
         }];
         
         payload['metaData'].isConfigured = true;
-
-        payload['arguments'].contactKey = true;
 
         console.log(payload);
         connection.trigger('updateActivity', payload);
