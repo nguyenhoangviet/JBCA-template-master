@@ -119,7 +119,6 @@ exports.publish = function (req, res) {
     // res.send(200, 'Publish');
     res.status(200).send('Publish');
 };
-};
 
 /*
  * POST Handler for /validate/ route of Activity.
