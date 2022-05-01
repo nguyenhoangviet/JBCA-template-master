@@ -55,7 +55,7 @@ exports.edit = function (req, res) {
     // Data from the req and put it in an array accessible to the main app.
     //console.log( req.body );
     // logData(req);
-    res.send(200, 'Edit');
+    // res.send(200, 'Edit');
     res.status(200).send('Edit');
     
 };
@@ -94,10 +94,11 @@ exports.execute = function (req, res) {
             var message = decoded.inArguments[0].message;
             var ContactID = decoded.inArguments[0].ContactID;
             
-            console.log('ContactID',ContactID);
+            // console.log('ContactID',ContactID);
+            
             // console.log('ContactID',ContactID);
             // console.log('----message',message);
-            // logData(req);
+            logData(req);
             // res.send(200, 'Execute');
             res.status(200).send('Execute');
         } else {
