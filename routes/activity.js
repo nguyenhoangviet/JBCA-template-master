@@ -91,14 +91,14 @@ exports.execute = function (req, res) {
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
 
-            var message = decoded.inArguments[0].message;
+            var JourneyName = decoded.inArguments[0].JourneyName;
             var ContactID = decoded.inArguments[0].ContactID;
             
             // console.log('ContactID',ContactID);
             
             // console.log('ContactID',ContactID);
-            // console.log('----message',message);
-            logData(req);
+            console.log('----JourneyName',JourneyName);
+            // logData(req);
             // res.send(200, 'Execute');
             res.status(200).send('Execute');
         } else {

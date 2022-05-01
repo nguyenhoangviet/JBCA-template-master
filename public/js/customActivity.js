@@ -105,6 +105,7 @@ define([
             "tokens": authTokens,
             "ContactKey": "{{Context.ContactKey}}",
             "VersionNumber": "{{Context.VersionNumber}}" ,
+            "JourneyName": "{{Context.JourneyName}}" ,
             "message": message ,
             "ContactID": "{{Contact.Key}}" 
         }];
