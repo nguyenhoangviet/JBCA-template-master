@@ -6,6 +6,8 @@ const Path = require('path');
 const JWT = require(Path.join(__dirname, '..', 'lib', 'jwtDecoder.js'));
 var util = require('util');
 var http = require('https');
+var axios = require('axios');
+var config = require('./mcConfig.json')
 
 exports.logExecuteData = [];
 
@@ -56,7 +58,7 @@ exports.edit = function (req, res) {
     //console.log( req.body );
     // logData(req);
     // res.send(200, 'Edit');
-    res.status(200).send('Edit');
+    res.status(200).send('Edit');''
     
 };
 
@@ -91,22 +93,50 @@ exports.execute = function (req, res) {
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
             var decodedOutArgs = decoded.outArguments[0];
-            var zaloAccessToken =  'https://openapi.zalo.me/v2.0/oa/message?access_token=Qv0nJ4MGw2jWcJH3Jv7fAsgHDqXFZwXRRCWoCZ-db55HpHDDCxIEQHptKNfv_l5IMVztPmZyz5Cdedj0QAlTOpZIM7z5YkD6EVvTL7ga_M9UtNLz18pnMt3nU5uIeCPxCjnRM1AKw4nYoaDC093YJtB5OLSEcjHgMvbKGmk4-oTNy7aOSwp_Cr3uG38fhPaWIDeFHck7Z78S-H5mHAB4QG3dJ4XKvy5TUhGR8JxfjILXbmOS4U6R96os81mEnQ02NPqy93c0Y0DjdH0e5_o46r3yCWWsl84DORm-94NdkI0hjY0dKFQY3nVhEIXsaAzA2i9oNaYV-sSyt2465Z3iKKcExYe';
-            var name = decoded.inArguments[0].name;
+            var znsToken = config.znsToken
+            var znsUrl =  'https://openapi.zalo.me/v2.0/oa/message?access_token=' + znsToken;
             var message = decoded.inArguments[0].message;
             var url = decoded.inArguments[0].url;
             var urlImage = decoded.inArguments[0].urlimg;
             var zaloId = decoded.inArguments[0].ContactID;
-            var contactkey = decoded.inArguments[0].contactkey;
-            var zzz = decoded.inArguments[0].objResults;
-            var ipAnswer = decoded.inArguments[0].ipAnswer;
-            // var title = decoded.inArguments[0].title.replace('%name%', name);
+            // var contactkey = decoded.inArguments[0].contactkey;
             
+
+            axios({
+                method: 'post',
+                url: znsUrl,
+                data: {
+                    "recipient": {
+                      "user_id": zaloId
+                    },
+                    "message": {
+                    "attachment": {
+                        "type": "template",
+                        "payload": {
+                        "template_type": "list",
+                        "elements": [
+                            {
+                            "title": title,
+                            "subtitle": message,
+                            "image_url": urlImage,
+                            "default_action": {
+                                "type": "oa.open.url",
+                                "url": url
+                                }
+                            }
+                        ]
+                        }
+                    }
+                    }    
+                  }
+              }).then(function (response) {
+                // console.log(response);
+              })
+              .catch(function (error) {
+                console.log(error);
+              }); 
             
-            console.log('decodedArgs',decodedArgs);
-            // console.log('----message',message);
-            // logData(req);
-            // res.send(200, 'Execute');
+
             res.status(200).send('Execute');
         } else {
             console.error('inArguments invalid.');
