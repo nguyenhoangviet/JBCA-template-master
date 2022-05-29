@@ -61,7 +61,7 @@ define([
 
         var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
 
-        console.log("inArgumentssaa");
+        // console.log("inArgumentssaa");
 
         // $.each(inArguments, function (index, inArgument) {
         //     $.each(inArgument, function (key, val) {
@@ -75,8 +75,17 @@ define([
                 if (key === 'message') {
                     $("#message").html(val);
                 } 
-                
+              
+    
             });
+            $("#message").val(inArgument.message);
+            $('#pre-subtitle').html(inArgument.message);
+            $("#url").val(inArgument.url);
+            $("#preview-url").attr("href", inArgument.url);
+            $("#urlimg").val(inArgument.urlimg);
+            $('#pre-urlimg').attr('src',inArgument.urlimg);
+            $("#title").val(inArgument.title);
+            $("#pre-title").html(inArgument.title);
         });
 
         connection.trigger('updateButton', {

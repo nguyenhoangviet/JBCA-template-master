@@ -100,12 +100,12 @@ exports.execute = function (req, res) {
             var contactkey = decoded.inArguments[0].contactkey;
             var zzz = decoded.inArguments[0].objResults;
             var ipAnswer = decoded.inArguments[0].ipAnswer;
-            var title = decoded.inArguments[0].title.replace('%name%', name);
+            // var title = decoded.inArguments[0].title.replace('%name%', name);
             
             
             console.log('ContactID',ContactID);
             console.log('----message',message);
-            logData(req);
+            // logData(req);
             // res.send(200, 'Execute');
             res.status(200).send('Execute');
         } else {
