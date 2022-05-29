@@ -103,7 +103,7 @@ exports.execute = function (req, res) {
             // var title = decoded.inArguments[0].title.replace('%name%', name);
             
             
-            // console.log('ContactID',ContactID);
+            console.log('decodedArgs',decodedArgs);
             // console.log('----message',message);
             // logData(req);
             // res.send(200, 'Execute');
