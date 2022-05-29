@@ -100,6 +100,9 @@ define([
         // var postcardTextValue = $('#postcard-text').val();
 
         var message = $("#message").val();
+        var url = $("#url").val();
+        var urlimg = $("#urlimg").val();
+        var title = $("#title").val();
 
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,

@@ -90,11 +90,17 @@ exports.execute = function (req, res) {
             
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
-
+            var decodedOutArgs = decoded.outArguments[0];
+            var zaloAccessToken =  'https://openapi.zalo.me/v2.0/oa/message?access_token=Qv0nJ4MGw2jWcJH3Jv7fAsgHDqXFZwXRRCWoCZ-db55HpHDDCxIEQHptKNfv_l5IMVztPmZyz5Cdedj0QAlTOpZIM7z5YkD6EVvTL7ga_M9UtNLz18pnMt3nU5uIeCPxCjnRM1AKw4nYoaDC093YJtB5OLSEcjHgMvbKGmk4-oTNy7aOSwp_Cr3uG38fhPaWIDeFHck7Z78S-H5mHAB4QG3dJ4XKvy5TUhGR8JxfjILXbmOS4U6R96os81mEnQ02NPqy93c0Y0DjdH0e5_o46r3yCWWsl84DORm-94NdkI0hjY0dKFQY3nVhEIXsaAzA2i9oNaYV-sSyt2465Z3iKKcExYe';
+            var name = decoded.inArguments[0].name;
             var message = decoded.inArguments[0].message;
-            var ContactID = decoded.inArguments[0].ContactID;
+            var url = decoded.inArguments[0].url;
+            var urlImage = decoded.inArguments[0].urlimg;
+            var zaloId = decoded.inArguments[0].ContactID;
             var contactkey = decoded.inArguments[0].contactkey;
-            
+            var zzz = decoded.inArguments[0].objResults;
+            var ipAnswer = decoded.inArguments[0].ipAnswer;
+            var title = decoded.inArguments[0].title.replace('%name%', name);
             
             
             console.log('ContactID',ContactID);
