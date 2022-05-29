@@ -96,11 +96,12 @@ exports.execute = function (req, res) {
             var znsToken = config.znsToken
             var znsUrl =  'https://openapi.zalo.me/v2.0/oa/message?access_token=' + znsToken;
             var message = decoded.inArguments[0].message;
+            var name = decoded.inArguments[0].name;
             var url = decoded.inArguments[0].url;
             var urlImage = decoded.inArguments[0].urlimg;
             var zaloId = decoded.inArguments[0].ContactID;
-            // var contactkey = decoded.inArguments[0].contactkey;
-            
+            // var title = decoded.inArguments[0].title.replace('%name%', name);
+            var title = decoded.inArguments[0].title.replace('%name%', name);
 
             axios({
                 method: 'post',

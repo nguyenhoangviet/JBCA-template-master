@@ -86,6 +86,7 @@ define([
             $('#pre-urlimg').attr('src',inArgument.urlimg);
             $("#title").val(inArgument.title);
             $("#pre-title").html(inArgument.title);
+
         });
 
         connection.trigger('updateButton', {
@@ -114,10 +115,13 @@ define([
         var title = $("#title").val();
 
         payload['arguments'].execute.inArguments = [{
-            "tokens": authTokens,
-            "ContactKey": "{{Context.ContactKey}}",
-            "VersionNumber": "{{Context.VersionNumber}}" ,
+  // "VersionNumber": "{{Context.VersionNumber}}" ,
             "message": message ,
+            "url": url ,
+            "title": title ,
+            "urlimg": urlimg ,
+            "ContactID": "{{Contact.Key}}" ,
+            "name": " {{Contact.Attribute.Zalo_DE.Name}}",
             "ContactID": "{{Contact.Key}}" 
         }];
         
