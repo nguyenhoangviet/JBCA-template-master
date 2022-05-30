@@ -105,7 +105,7 @@ exports.execute = function (req, res) {
 
             axios({
                 method: 'post',
-                url: znsUrl,
+                url: 'https://openapi.zalo.me/v2.0/oa/message?access_token=' + znsToken,
                 data: {
                     "recipient": {
                       "user_id": zaloId
