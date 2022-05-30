@@ -93,7 +93,7 @@ exports.execute = function (req, res) {
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
             var decodedOutArgs = decoded.outArguments[0];
-            var znsToken = config.znsToken
+            var znsToken = config.Zalo;
             var znsUrl =  'https://openapi.zalo.me/v2.0/oa/message?access_token=' + znsToken;
             var message = decoded.inArguments[0].message;
             var name = decoded.inArguments[0].name;
