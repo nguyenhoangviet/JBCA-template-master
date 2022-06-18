@@ -90,52 +90,53 @@ exports.execute = function (req, res) {
 
         if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
             
+            console.log('aaa',decoded)
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
             var decodedOutArgs = decoded.outArguments[0];
-            var znsToken = config.Zalo.token;
-            var znsUrl =  'https://openapi.zalo.me/v2.0/oa/message?access_token=' + znsToken;
+            // var znsToken = config.Zalo.token;
+            // var znsUrl =  'https://openapi.zalo.me/v2.0/oa/message?access_token=' + znsToken;
             var message = decoded.inArguments[0].message;
             var name = decoded.inArguments[0].name;
             var url = decoded.inArguments[0].url;
             var urlImage = decoded.inArguments[0].urlimg;
             var zaloId = decoded.inArguments[0].ContactID;
             // var title = decoded.inArguments[0].title.replace('%name%', name);
-            var title = decoded.inArguments[0].title.replace('%name%', name);
+            // var title = decoded.inArguments[0].title.replace('%name%', name);
 
-            axios({
-                method: 'post',
-                url: 'https://openapi.zalo.me/v2.0/oa/message?access_token=' + znsToken,
-                data: {
-                    "recipient": {
-                      "user_id": zaloId
-                    },
-                    "message": {
-                    "attachment": {
-                        "type": "template",
-                        "payload": {
-                        "template_type": "list",
-                        "elements": [
-                            {
-                            "title": title,
-                            "subtitle": message,
-                            "image_url": urlImage,
-                            "default_action": {
-                                "type": "oa.open.url",
-                                "url": url
-                                }
-                            }
-                        ]
-                        }
-                    }
-                    }    
-                  }
-              }).then(function (response) {
-                console.log(response);
-              })
-              .catch(function (error) {
-                console.log(error);
-              }); 
+            // axios({
+            //     method: 'post',
+            //     url: 'https://openapi.zalo.me/v2.0/oa/message?access_token=' + znsToken,
+            //     data: {
+            //         "recipient": {
+            //           "user_id": zaloId
+            //         },
+            //         "message": {
+            //         "attachment": {
+            //             "type": "template",
+            //             "payload": {
+            //             "template_type": "list",
+            //             "elements": [
+            //                 {
+            //                 "title": title,
+            //                 "subtitle": message,
+            //                 "image_url": urlImage,
+            //                 "default_action": {
+            //                     "type": "oa.open.url",
+            //                     "url": url
+            //                     }
+            //                 }
+            //             ]
+            //             }
+            //         }
+            //         }    
+            //       }
+            //   }).then(function (response) {
+            //     console.log(response);
+            //   })
+            //   .catch(function (error) {
+            //     console.log(error);
+            //   }); 
             
 
             res.status(200).send('Execute');
