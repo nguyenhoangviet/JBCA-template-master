@@ -115,6 +115,8 @@ define([
         var title = $("#title").val();
         var foundSignupDate = Date.now();
 
+        console.log(foundSignupDate);
+
         payload['arguments'].execute.inArguments = [{
   // "VersionNumber": "{{Context.VersionNumber}}" ,
             "message": message ,
