@@ -139,8 +139,8 @@ exports.execute = function (req, res) {
             //   }); 
             
 
-            res.send("caseid",message);
-            res.status(200).send('Execute');
+            // res.status(200).send("caseid",message);
+            res.status(200).send('caseid',message);
         } else {
             console.error('inArguments invalid.');
             return res.status(400).end();
