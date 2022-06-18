@@ -113,7 +113,7 @@ define([
         var url = $("#url").val();
         var urlimg = $("#urlimg").val();
         var title = $("#title").val();
-        var foundSignupDate = Date.now();
+        var foundSignupDate = "aaaaaaaa";
 
         console.log(foundSignupDate);
 

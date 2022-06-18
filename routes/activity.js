@@ -90,7 +90,7 @@ exports.execute = function (req, res) {
 
         if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
             
-            console.log('aaa',decoded.outArguments[0])
+            console.log('aaa',decoded)
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
             var decodedOutArgs = decoded.outArguments[0];
