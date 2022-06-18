@@ -129,7 +129,7 @@ define([
         }];
 
         payload['arguments'].execute.outArguments = [{
-            "caseID": "{{Interaction.REST-1.caseID}}"
+            // "caseID": "{{Interaction.REST-3.caseID}}"
         }];
         
         payload['metaData'].isConfigured = true;
