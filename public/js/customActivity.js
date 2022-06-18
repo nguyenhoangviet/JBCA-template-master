@@ -113,12 +113,12 @@ define([
         var url = $("#url").val();
         var urlimg = $("#urlimg").val();
         var title = $("#title").val();
-        var foundSignupDate = "aaaaaaaa";
+        // var foundSignupDate = "aaaaaaaa";
 
         console.log(foundSignupDate);
 
         payload['arguments'].execute.inArguments = [{
-            "caseID": "{{Interaction.REST-1.caseID}}" ,
+            "caseID": "{{Interaction.REST-4.caseID}}" ,
             "message": message ,
             "url": url ,
             "title": title ,
@@ -129,7 +129,7 @@ define([
         }];
 
         payload['arguments'].execute.outArguments = [{
-            // "caseID": "{{Interaction.REST-3.caseID}}"
+            "caseID": "{{Interaction.REST-4.caseID}}"
         }];
         
         payload['metaData'].isConfigured = true;
