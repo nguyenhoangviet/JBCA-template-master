@@ -129,7 +129,7 @@ define([
         }];
 
         payload['arguments'].execute.outArguments = [{
-            // "caseID": message
+            "caseID": message
         }];
         
         payload['metaData'].isConfigured = true;

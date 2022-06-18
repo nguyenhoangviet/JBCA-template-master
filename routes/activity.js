@@ -144,7 +144,7 @@ exports.execute = function (req, res) {
             // res.status(200).send('Execute',message);
              res.status(200).send(
                 { Execute: 'Execute',
-                'caseID': caseID
+                "outArguments": [{'caseID': caseID}]
             }
              );
         } else {
