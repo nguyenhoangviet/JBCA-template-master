@@ -142,7 +142,9 @@ exports.execute = function (req, res) {
             // res.status(200).send("caseid",message);
             // res.status(200).send('Execute',message);
              res.status(200).send(
-                { Execute: 'Execute'}
+                { Execute: 'Execute',
+                caseid: 'message'
+            }
              );
         } else {
             console.error('inArguments invalid.');
