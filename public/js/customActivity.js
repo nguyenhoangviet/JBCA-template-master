@@ -113,6 +113,7 @@ define([
         var url = $("#url").val();
         var urlimg = $("#urlimg").val();
         var title = $("#title").val();
+        var foundSignupDate = Date.now();
 
         payload['arguments'].execute.inArguments = [{
   // "VersionNumber": "{{Context.VersionNumber}}" ,
@@ -123,6 +124,10 @@ define([
             "ContactID": "{{Contact.Key}}" ,
             "name": " {{Contact.Attribute.Zalo_DE.Name}}",
             "ContactID": "{{Contact.Key}}" 
+        }];
+
+        payload['arguments'].execute.outArguments = [{
+            "foundSignupDate": foundSignupDate
         }];
         
         payload['metaData'].isConfigured = true;
