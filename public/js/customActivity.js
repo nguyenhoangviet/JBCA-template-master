@@ -115,7 +115,7 @@ define([
         var title = $("#title").val();
         // var foundSignupDate = "aaaaaaaa";
 
-        console.log(foundSignupDate);
+        // console.log(foundSignupDate);
 
         payload['arguments'].execute.inArguments = [{
             "caseID": "{{Interaction.REST-4.caseID}}" ,
