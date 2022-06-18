@@ -8,9 +8,9 @@
     "type": "REST",
     "lang": {
         "en-US": {
-            "name": "YYY",
-          "description": "Custom Journey Builder activity",
-          "step1Label": "Configure Activity"
+            "name": "ZNS",
+          "description": "Zalo - ZNS - Message APP",
+          "step1Label": "Content setup"
         }
     },
     "arguments": {
