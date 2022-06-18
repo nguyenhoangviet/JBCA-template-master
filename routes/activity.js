@@ -90,7 +90,7 @@ exports.execute = function (req, res) {
 
         if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
             
-            console.log('aaa',decoded)
+            console.log('okayla',inArguments[0])
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
             var decodedOutArgs = decoded.outArguments[0];
@@ -139,7 +139,7 @@ exports.execute = function (req, res) {
             //   }); 
             
 
-            res.status(200).send('Execute');
+            res.status(200).send("caseid",message);
         } else {
             console.error('inArguments invalid.');
             return res.status(400).end();
