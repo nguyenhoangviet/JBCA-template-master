@@ -32,8 +32,8 @@ define([
     }
 
     function onRequestedDataSources(dataSources){
-        console.log('*** requestedDataSources ***');
-        console.log(dataSources);
+        // console.log('*** requestedDataSources ***');
+        // console.log(dataSources);
     }
 
     function onRequestedInteraction (interaction) {    
@@ -43,7 +43,7 @@ define([
 
      function onRequestedTriggerEventDefinition(eventDefinitionModel) {
         console.log('*** requestedTriggerEventDefinition ***');
-        console.log(eventDefinitionModel);
+        // console.log(eventDefinitionModel);
     }
 
     function initialize(data) {
@@ -97,12 +97,12 @@ define([
     }
 
     function onGetTokens(tokens) {
-        console.log(tokens);
+        // console.log(tokens);
         authTokens = tokens;
     }
 
     function onGetEndpoints(endpoints) {
-        console.log(endpoints);
+        // console.log(endpoints);
     }
 
     function save() {
@@ -134,7 +134,7 @@ define([
         
         payload['metaData'].isConfigured = true;
 
-        console.log(payload);
+        // console.log(payload);
         connection.trigger('updateActivity', payload);
     }
 
