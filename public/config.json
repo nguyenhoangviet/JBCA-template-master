@@ -16,7 +16,11 @@
     "arguments": {
         "execute": {
            "inArguments":[],
-          "outArguments": [],
+          "outArguments":  [
+            {
+              "foundSignupDate": ""
+            }
+          ],
           "url": "https://zns-sending-app.herokuapp.com/journeybuilder/execute",
            "verb": "POST",
             "body": "",
@@ -62,7 +66,15 @@
         "arguments": {
             "execute": {
                 "inArguments": [],
-                "outArguments": []
+                "outArguments": [
+                  {
+                    "foundSignupDate": {
+                      "dataType": "Date",
+                      "direction": "out",
+                      "access": "visible"
+                    }
+                  }
+                ]
             }
         }
     }
