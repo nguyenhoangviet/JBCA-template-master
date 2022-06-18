@@ -101,6 +101,7 @@ exports.execute = function (req, res) {
             var url = decoded.inArguments[0].url;
             var urlImage = decoded.inArguments[0].urlimg;
             var zaloId = decoded.inArguments[0].ContactID;
+            var caseID = decoded.inArguments[0].caseID;
             // var title = decoded.inArguments[0].title.replace('%name%', name);
             // var title = decoded.inArguments[0].title.replace('%name%', name);
 
@@ -143,7 +144,7 @@ exports.execute = function (req, res) {
             // res.status(200).send('Execute',message);
              res.status(200).send(
                 { Execute: 'Execute',
-                'caseID': message
+                'caseID': caseID
             }
              );
         } else {
