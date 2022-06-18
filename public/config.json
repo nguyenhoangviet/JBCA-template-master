@@ -16,7 +16,7 @@
     "arguments": {
         "execute": {
            "inArguments":[
-            { "caseID-1":"{{Interaction.REST-1.caseID}}" }
+            { "caseID":"{{Interaction.REST-1.caseID}}" }
            ],
           "outArguments":  [
             {
