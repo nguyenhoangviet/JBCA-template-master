@@ -118,7 +118,7 @@ define([
         // console.log(foundSignupDate);
 
         payload['arguments'].execute.inArguments = [{
-            "caseID": "{{Interaction.START-1.name}}" ,
+            "caseID": "" ,
             "message": message ,
             "url": url ,
             "title": title ,
@@ -129,7 +129,7 @@ define([
         }];
 
         payload['arguments'].execute.outArguments = [{
-            "caseID": "{{Interaction.START-1.name}}"
+            "caseID": ""
         }];
         
         payload['metaData'].isConfigured = true;
