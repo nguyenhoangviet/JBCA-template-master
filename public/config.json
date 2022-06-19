@@ -15,7 +15,10 @@
     },
     "arguments": {
         "execute": {
-           "inArguments":[],
+           "inArguments":[{
+              "caseid":"{{Interaction.REST-1.foundSignupDate}}"
+            
+           }],
           "outArguments":  [
             {
               "foundSignupDate": ""
