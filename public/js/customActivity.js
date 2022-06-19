@@ -118,7 +118,7 @@ define([
         // console.log(foundSignupDate);
 
         payload['arguments'].execute.inArguments = [{
-            "CaseID":"{{Interaction.REST-1.CaseID}}",
+            // "CaseID":"{{Interaction.REST-1.CaseID}}",
             "message": message ,
             "url": url ,
             "title": title ,
