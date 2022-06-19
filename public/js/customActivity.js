@@ -128,9 +128,9 @@ define([
             "ContactID": "{{Contact.Key}}" 
         }];
 
-        payload['arguments'].execute.outArguments = [{
-            "CaseID":"{{Interaction.REST-1.CaseID}}",
-        }];
+        // payload['arguments'].execute.outArguments = [{
+        //     "CaseID":"{{Interaction.REST-1.CaseID}}",
+        // }];
         
         payload['metaData'].isConfigured = true;
 
