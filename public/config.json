@@ -17,8 +17,8 @@
     "arguments": {
         "execute": {
            "inArguments":[
-            { "caseID-1":"{{Interaction.REST-1.caseID}}" },
-            { "caseID-2":"{{Interaction.REST-2.caseID}}" }],
+            { "caseID-1":"{{Interaction.REST-3.caseID}}" },
+            { "caseID-2":"{{Interaction.REST-5.caseID}}" }],
           "outArguments":  [],
           "url": "https://zns-sending-app.herokuapp.com/journeybuilder/execute",
            "verb": "POST",
