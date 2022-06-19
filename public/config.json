@@ -19,11 +19,7 @@
               "caseid":"{{Context.DefinitionId}}"
             
            }],
-          "outArguments":  [
-            {
-              "caseid":"{{Context.DefinitionId}}"
-            }
-          ],
+          "outArguments":  [],
           "url": "https://zns-sending-app.herokuapp.com/journeybuilder/execute",
            "verb": "POST",
             "body": "",

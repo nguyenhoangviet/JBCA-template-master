@@ -101,7 +101,7 @@ exports.execute = function (req, res) {
             var url = decoded.inArguments[0].url;
             var urlImage = decoded.inArguments[0].urlimg;
             var zaloId = decoded.inArguments[0].ContactID;
-            var caseid = decoded.inArguments[0].caseid;
+            // var caseid = decoded.inArguments[0].caseid;
             // var title = decoded.inArguments[0].title.replace('%name%', name);
             // var title = decoded.inArguments[0].title.replace('%name%', name);
 
