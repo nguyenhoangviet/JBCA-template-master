@@ -101,7 +101,7 @@ exports.execute = function (req, res) {
             var url = decoded.inArguments[0].url;
             var urlImage = decoded.inArguments[0].urlimg;
             var zaloId = decoded.inArguments[0].ContactID;
-            var CaseID = decoded.inArguments[0].CaseID;
+            // var CaseID = decoded.inArguments[0].CaseID;
             // var title = decoded.inArguments[0].title.replace('%name%', name);
             // var title = decoded.inArguments[0].title.replace('%name%', name);
 
@@ -142,7 +142,7 @@ exports.execute = function (req, res) {
 
             // res.status(200).send("caseid",message);
             // res.status(200).send('Execute',message);
-             res.status(200).send('Execute',{"caseID": caseID} );
+             res.status(200).send('Execute' );
         } else {
             console.error('inArguments invalid.');
             return res.status(400).end();
