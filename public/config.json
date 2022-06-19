@@ -71,8 +71,8 @@
                 "inArguments": [],
                 "outArguments": [
                   {
-                    "foundSignupDate": {
-                      "dataType": "Date",
+                    "caseid": {
+                      "dataType": "Text",
                       "direction": "out",
                       "access": "visible"
                     }
