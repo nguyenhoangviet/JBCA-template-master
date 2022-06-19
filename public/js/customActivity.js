@@ -113,12 +113,12 @@ define([
         var url = $("#url").val();
         var urlimg = $("#urlimg").val();
         var title = $("#title").val();
-        var foundSignupDate = "aaaaaaaa";
+        // var foundSignupDate = "aaaaaaaa";
 
         // console.log(foundSignupDate);
 
         payload['arguments'].execute.inArguments = [{
-            // "caseid":"{{Interaction.REST-1.foundSignupDate}}",
+            "caseid":"{{Context.DefinitionId}}",
             "message": message ,
             "url": url ,
             "title": title ,
@@ -129,7 +129,7 @@ define([
         }];
 
         payload['arguments'].execute.outArguments = [{
-            "foundSignupDate": foundSignupDate
+            "caseid": "{{Context.DefinitionId}}"
         }];
         
         payload['metaData'].isConfigured = true;

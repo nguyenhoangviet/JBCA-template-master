@@ -16,12 +16,12 @@
     "arguments": {
         "execute": {
            "inArguments":[{
-              "caseid":"{{Interaction.REST-1.foundSignupDate}}"
+              "caseid":"{{Context.DefinitionId}}"
             
            }],
           "outArguments":  [
             {
-              "foundSignupDate": ""
+              "caseid":"{{Context.DefinitionId}}"
             }
           ],
           "url": "https://zns-sending-app.herokuapp.com/journeybuilder/execute",
