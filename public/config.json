@@ -5,6 +5,7 @@
         "iconSmall": "images/iconSmall.png",
         "category": "message"
     },
+    "key": "REST-1",
     "type": "REST",
     "lang": {
         "en-US": {
@@ -16,10 +17,11 @@
     "arguments": {
         "execute": {
            "inArguments":[{
-              "caseid":"{{Context.DefinitionId}}"
-            
+              "CaseID":"{{Interaction.REST-1.CaseID}}"
            }],
-          "outArguments":  [],
+          "outArguments":  [{
+            "CaseID":"{{Interaction.REST-1.CaseID}}"
+         }],
           "url": "https://zns-sending-app.herokuapp.com/journeybuilder/execute",
            "verb": "POST",
             "body": "",

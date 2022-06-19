@@ -118,7 +118,7 @@ define([
         // console.log(foundSignupDate);
 
         payload['arguments'].execute.inArguments = [{
-            // "caseid":"{{Context.DefinitionId}}",
+            "CaseID":"{{Interaction.REST-1.CaseID}}",
             "message": message ,
             "url": url ,
             "title": title ,
@@ -128,9 +128,9 @@ define([
             "ContactID": "{{Contact.Key}}" 
         }];
 
-        // payload['arguments'].execute.outArguments = [{
-        //     "caseid": "{{Context.DefinitionId}}"
-        // }];
+        payload['arguments'].execute.outArguments = [{
+            "CaseID":"{{Interaction.REST-1.CaseID}}",
+        }];
         
         payload['metaData'].isConfigured = true;
 
