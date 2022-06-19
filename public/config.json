@@ -65,15 +65,7 @@
         "arguments": {
             "execute": {
                 "inArguments": [],
-                "outArguments": [
-                  {
-                    "caseid": {
-                      "dataType": "Text",
-                      "direction": "out",
-                      "access": "visible"
-                    }
-                  }
-                ]
+                "outArguments": []
             }
         }
     }
