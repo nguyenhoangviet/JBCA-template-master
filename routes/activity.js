@@ -93,7 +93,9 @@ exports.execute = function (req, res) {
             // console.log('okayla',decoded)
             // decoded in arguments
             var decodedInArgs = decoded.inArguments[0];
+            var decodedInArgs2 = decoded.inArguments[0].ds[0].deSchema.fields;
             console.log('okayla',decodedInArgs)
+            console.log('okayla2',decodedInArgs)
             var decodedOutArgs = decoded.outArguments[0];
             // var znsToken = config.Zalo.token;
             // var znsUrl =  'https://openapi.zalo.me/v2.0/oa/message?access_token=' + znsToken;
