@@ -37,6 +37,7 @@ define([
     function onRequestedDataSources(dataSources){
         console.log('*** requestedDataSources ***');
         console.log(dataSources);
+        ds = dataSources;
     }
 
     function onRequestedInteraction (interaction) {    
@@ -105,7 +106,7 @@ define([
     }
 
     function onGetEndpoints(endpoints) {
-        // console.log(endpoints);
+        // console.log(endpoints);okay 1
     }
 
     function save() {
@@ -120,8 +121,9 @@ define([
 
         // console.log(foundSignupDate);
 
-        payload['arguments'].execute.inArguments = [{
+        payload['arguments'].execute.inArguments = [{  
             "message": message ,
+            "ds": ds,
             "url": url ,
             "title": title ,
             "urlimg": urlimg ,
