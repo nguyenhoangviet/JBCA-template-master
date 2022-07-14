@@ -93,7 +93,7 @@ exports.execute = function (req, res) {
             // console.log('okayla',decoded)
             // decoded in arguments
             var decodedInArgs = decoded.inArguments[0];
-            var decodedInArgs2 = decoded.inArguments[0].ds[0].deSchema.fields;
+            var decodedInArgs2 = decoded.inArguments[0].ds;
             console.log('okayla',decodedInArgs)
             console.log('okayla2',decodedInArgs2)
             var decodedOutArgs = decoded.outArguments[0];
