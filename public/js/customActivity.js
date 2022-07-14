@@ -16,10 +16,7 @@ define([
     connection.on('requestedInteraction', onRequestedInteraction);
     connection.on('requestedTriggerEventDefinition', onRequestedTriggerEventDefinition);
     connection.on('requestedDataSources', onRequestedDataSources);
-    connection.on('requestedSchema', function (data) {
-        // save schema
-        console.log('*** Schema ***', JSON.stringify(data['schema']));
-     });
+    connection.on('requestedSchema', onRequestedSchema);
     connection.on('clickedNext', save);
    
     function onRender() {
@@ -39,10 +36,16 @@ define([
         console.log(dataSources);
         ds = dataSources;
     }
+    function onRequestedSchema(data) {
+        // save schema
+        console.log('*** Schema ***', JSON.stringify(data['schema']));
+        dt = JSON.stringify(data['schema']);
+     }
 
     function onRequestedInteraction (interaction) {    
         console.log('*** requestedInteraction ***');
         console.log(interaction);
+        is = interaction;
      }
 
      function onRequestedTriggerEventDefinition(eventDefinitionModel) {
@@ -124,6 +127,8 @@ define([
         payload['arguments'].execute.inArguments = [{  
             "message": message ,
             "ds": ds,
+            "dt": dt,
+            "is": is,
             "url": url ,
             "title": title ,
             "urlimg": urlimg ,
