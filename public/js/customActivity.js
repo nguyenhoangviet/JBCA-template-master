@@ -16,7 +16,10 @@ define([
     connection.on('requestedInteraction', onRequestedInteraction);
     connection.on('requestedTriggerEventDefinition', onRequestedTriggerEventDefinition);
     connection.on('requestedDataSources', onRequestedDataSources);
-
+    connection.on('requestedSchema', function (data) {
+        // save schema
+        console.log('*** Schema ***', JSON.stringify(data['schema']));
+     });
     connection.on('clickedNext', save);
    
     function onRender() {
@@ -43,7 +46,7 @@ define([
 
      function onRequestedTriggerEventDefinition(eventDefinitionModel) {
         console.log('*** requestedTriggerEventDefinition ***');
-        // console.log(eventDefinitionModel);
+        
     }
 
     function initialize(data) {
@@ -118,8 +121,8 @@ define([
         // console.log(foundSignupDate);
 
         payload['arguments'].execute.inArguments = [{
-            "caseID-1":"{{Interaction.REST-4.message}}",
-            "CaseID-2":"{{Interaction.REST-5.message}}",
+            // "caseID-1":"{{Interaction.REST-4.message}}",
+            // "CaseID-2":"{{Interaction.REST-5.message}}",
             "message": message ,
             "url": url ,
             "title": title ,
@@ -129,13 +132,11 @@ define([
             "ContactID": "{{Contact.Key}}" 
         }];
 
-        // payload['arguments'].execute.outArguments = [{
-        //     "CaseID":"{{Interaction.REST-1.CaseID}}",
-        // }];
+;
         
         payload['metaData'].isConfigured = true;
 
-        // console.log(payload);
+        console.log(payload);
         connection.trigger('updateActivity', payload);
     }
 
