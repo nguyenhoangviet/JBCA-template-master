@@ -90,9 +90,12 @@ exports.execute = function (req, res) {
 
         if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
             
-            console.log('okayla',decoded)
+            // console.log('okayla',decoded)
             // decoded in arguments
-            var decodedArgs = decoded.inArguments[0];
+            var decodedInArgs = decoded.inArguments[0];
+            var decodedInArgs2 = decoded.inArguments[0].ds;
+            console.log('okayla',decodedInArgs)
+            console.log('okayla2',decodedInArgs2)
             var decodedOutArgs = decoded.outArguments[0];
             // var znsToken = config.Zalo.token;
             // var znsUrl =  'https://openapi.zalo.me/v2.0/oa/message?access_token=' + znsToken;

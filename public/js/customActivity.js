@@ -7,6 +7,9 @@ define([
 
     var connection = new Postmonger.Session();
     var authTokens = {};
+    var ds = {};
+    var dt = {};
+    var is = {};
     var payload = {};
     $(window).ready(onRender);
 
@@ -16,10 +19,14 @@ define([
     connection.on('requestedInteraction', onRequestedInteraction);
     connection.on('requestedTriggerEventDefinition', onRequestedTriggerEventDefinition);
     connection.on('requestedDataSources', onRequestedDataSources);
+<<<<<<< HEAD
     connection.on('requestedSchema', function (data) {
         // save schema
         console.log('*** Schema ***', JSON.stringify(data['schema']));
      });
+=======
+    connection.on('requestedSchema', onRequestedSchema);
+>>>>>>> f665a8f8f9e436a5779ecc763514594d57a24d82
     connection.on('clickedNext', save);
    
     function onRender() {
@@ -35,18 +42,29 @@ define([
     }
 
     function onRequestedDataSources(dataSources){
-        // console.log('*** requestedDataSources ***');
-        // console.log(dataSources);
+        console.log('*** requestedDataSources ***');
+        console.log(dataSources);
+        ds = dataSources;
     }
+    function onRequestedSchema(data) {
+        // save schema
+        console.log('*** Schema ***', JSON.stringify(data['schema']));
+        dt = data['schema'];
+     }
 
     function onRequestedInteraction (interaction) {    
         console.log('*** requestedInteraction ***');
         console.log(interaction);
+        is = interaction;
      }
 
      function onRequestedTriggerEventDefinition(eventDefinitionModel) {
         console.log('*** requestedTriggerEventDefinition ***');
+<<<<<<< HEAD
         
+=======
+        console.log(eventDefinitionModel);
+>>>>>>> f665a8f8f9e436a5779ecc763514594d57a24d82
     }
 
     function initialize(data) {
@@ -105,7 +123,7 @@ define([
     }
 
     function onGetEndpoints(endpoints) {
-        // console.log(endpoints);
+        // console.log(endpoints);okay 1
     }
 
     function save() {
@@ -120,10 +138,17 @@ define([
 
         // console.log(foundSignupDate);
 
+<<<<<<< HEAD
         payload['arguments'].execute.inArguments = [{
             // "caseID-1":"{{Interaction.REST-4.message}}",
             // "CaseID-2":"{{Interaction.REST-5.message}}",
+=======
+        payload['arguments'].execute.inArguments = [{  
+>>>>>>> f665a8f8f9e436a5779ecc763514594d57a24d82
             "message": message ,
+            "ds": ds,
+            "dt": dt,
+            "is": is,
             "url": url ,
             "title": title ,
             "urlimg": urlimg ,
