@@ -19,14 +19,7 @@ define([
     connection.on('requestedInteraction', onRequestedInteraction);
     connection.on('requestedTriggerEventDefinition', onRequestedTriggerEventDefinition);
     connection.on('requestedDataSources', onRequestedDataSources);
-<<<<<<< HEAD
-    connection.on('requestedSchema', function (data) {
-        // save schema
-        console.log('*** Schema ***', JSON.stringify(data['schema']));
-     });
-=======
     connection.on('requestedSchema', onRequestedSchema);
->>>>>>> f665a8f8f9e436a5779ecc763514594d57a24d82
     connection.on('clickedNext', save);
    
     function onRender() {
@@ -60,11 +53,7 @@ define([
 
      function onRequestedTriggerEventDefinition(eventDefinitionModel) {
         console.log('*** requestedTriggerEventDefinition ***');
-<<<<<<< HEAD
-        
-=======
         console.log(eventDefinitionModel);
->>>>>>> f665a8f8f9e436a5779ecc763514594d57a24d82
     }
 
     function initialize(data) {
@@ -138,13 +127,7 @@ define([
 
         // console.log(foundSignupDate);
 
-<<<<<<< HEAD
-        payload['arguments'].execute.inArguments = [{
-            // "caseID-1":"{{Interaction.REST-4.message}}",
-            // "CaseID-2":"{{Interaction.REST-5.message}}",
-=======
         payload['arguments'].execute.inArguments = [{  
->>>>>>> f665a8f8f9e436a5779ecc763514594d57a24d82
             "message": message ,
             "ds": ds,
             "dt": dt,
