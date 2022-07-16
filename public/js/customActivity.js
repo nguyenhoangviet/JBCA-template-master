@@ -140,13 +140,11 @@ define([
             "ContactID": "{{Contact.Key}}" 
         }];
 
-        // payload['arguments'].execute.outArguments = [{
-        //     "CaseID":"{{Interaction.REST-1.CaseID}}",
-        // }];
+;
         
         payload['metaData'].isConfigured = true;
 
-        // console.log(payload);
+        console.log(payload);
         connection.trigger('updateActivity', payload);
     }
 
