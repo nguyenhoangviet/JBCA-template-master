@@ -14,6 +14,7 @@ define([
     $(window).ready(onRender);
 
     connection.on('initActivity', initialize);
+    connection.on('requestedInteractionDefaults', requestedInteractionDefaults);
     connection.on('requestedTokens', onGetTokens);
     connection.on('requestedEndpoints', onGetEndpoints);
     connection.on('requestedInteraction', onRequestedInteraction);
@@ -30,8 +31,14 @@ define([
         connection.trigger('requestEndpoints');
         connection.trigger('requestInteraction');
         connection.trigger('requestTriggerEventDefinition');
-        connection.trigger('requestDataSources');  
+        connection.trigger('requestDataSources'); 
+        connection.trigger('requestedSchema');
+        connection.trigger('requestedInteractionDefaults');
 
+    }
+    function requestedInteractionDefaults(settings){
+        console.log('*** requestedInteractionDefaults ***');
+        console.log(settings);
     }
 
     function onRequestedDataSources(dataSources){
@@ -57,7 +64,7 @@ define([
     }
 
     function initialize(data) {
-        console.log(data);
+        console.log("sdjkshdkjs",data);
         if (data) {
             payload = data;
         }
@@ -107,12 +114,12 @@ define([
     }
 
     function onGetTokens(tokens) {
-        // console.log(tokens);
+        console.log(tokens);
         authTokens = tokens;
     }
 
     function onGetEndpoints(endpoints) {
-        // console.log(endpoints);okay 1
+        console.log(endpoints);
     }
 
     function save() {
@@ -123,10 +130,6 @@ define([
         var url = $("#url").val();
         var urlimg = $("#urlimg").val();
         var title = $("#title").val();
-        // var foundSignupDate = "aaaaaaaa";
-
-        // console.log(foundSignupDate);
-
         payload['arguments'].execute.inArguments = [{  
             "message": message ,
             "ds": ds,
@@ -144,7 +147,7 @@ define([
         
         payload['metaData'].isConfigured = true;
 
-        console.log(payload);
+        console.log("payload",payload);
         connection.trigger('updateActivity', payload);
     }
 
