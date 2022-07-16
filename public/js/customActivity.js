@@ -42,7 +42,7 @@ define([
     function onRequestedSchema(data) {
         // save schema
         console.log('*** Schema ***', JSON.stringify(data['schema']));
-        dt = data['schema'];
+        dt = data;
      }
 
     function onRequestedInteraction (interaction) {    
